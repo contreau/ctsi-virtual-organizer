@@ -1,0 +1,503 @@
+// $teal: #1e9285;
+$teal: linear-gradient(to right, #1e9285, #23a697, #29bbaa, #2fd0bd, #35e5d0);
+// $green: #57853c
+$green: linear-gradient(to bottom, #57853c, #669a47, #75af53, #85c65f, #95dc6b);
+// $grey: #816f63;
+$grey: linear-gradient(
+  to left top,
+  #816f63,
+  #8e8076,
+  #9c9189,
+  #a9a29d,
+  #b7b4b2
+);
+// $orange: #e54f10;
+$orange: linear-gradient(to left, #e54f10, #eb5d23, #f16b34, #f67743, #fb8452);
+// $lightblue: #2994be;
+$lightblue: linear-gradient(
+  to right,
+  #2994be,
+  #3ea1ca,
+  #4fafd6,
+  #60bde2,
+  #70cbee
+);
+// $navy: #314462;
+$navy: linear-gradient(to right, #314462, #445878, #576d8f, #6b82a6, #8098be);
+// $purple: #933d7e;
+$purple: linear-gradient(to left, #933d7e, #a34d8e, #b45e9f, #c56eb0, #d67fc1);
+// $red: #e31a2c;
+$red: linear-gradient(to left, #e31a2c, #e92b39, #ee3947, #f34553, #f85160);
+$c_width: 520px;
+$c_height: 450px;
+$tear_width: 140px;
+$tear_height: 140px;
+
+// animations
+@mixin shift($directionX, $directionY, $xVal, $yVal) {
+  #{$directionX}: $xVal;
+  #{$directionY}: $yVal;
+  transition: all 0.4s;
+}
+
+@keyframes fade {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Text inserted via JavaScript
+p.tear-label {
+  text-align: center;
+  color: #fff;
+}
+
+p#greyLabel {
+  transform: rotate(203deg);
+}
+
+p#orangeLabel {
+  transform: rotate(158deg);
+}
+
+p#redLabel {
+  transform: rotate(111deg);
+}
+
+p#purpleLabel {
+  transform: rotate(67deg);
+}
+
+p#navyLabel {
+  transform: rotate(24deg);
+}
+
+p#lightblueLabel {
+  transform: rotate(-22deg);
+}
+
+p#tealLabel {
+  transform: rotate(-67deg);
+}
+
+p#greenLabel {
+  transform: rotate(-113deg);
+}
+
+// icon properties
+img#lightbulb {
+  transform: rotate(203deg);
+  width: auto;
+  height: 75px;
+}
+
+img#research {
+  height: 70px;
+  width: auto;
+  transform: rotate(158deg);
+}
+
+img#checklist {
+  width: auto;
+  height: 60px;
+  transform: rotate(67deg);
+}
+
+img#circle {
+  width: 70px;
+  height: auto;
+  transform: rotate(-70deg);
+}
+
+img#money {
+  height: 70px;
+  width: auto;
+  transform: rotate(25deg);
+}
+
+img#pencil {
+  width: auto;
+  height: 70px;
+  transform: rotate(-30deg);
+}
+
+img#head {
+  width: auto;
+  height: 70px;
+  transform: rotate(-67deg);
+}
+
+img#linechart {
+  width: 65px;
+  height: auto;
+  transform: rotate(-111deg);
+}
+.container {
+  position: relative;
+  width: $c_width;
+  height: $c_height;
+  // border: solid black;
+}
+
+.tear {
+  visibility: hidden;
+  position: absolute;
+  height: $tear_height;
+  width: $tear_width;
+  border-radius: 100% 0% 80% 20% / 80% 0% 100% 20%;
+  transition-duration: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 3px 0px;
+  display: grid;
+  place-items: center;
+}
+
+.tear:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition-duration: 0.4s;
+}
+
+#grey {
+  background-image: $grey;
+  transform: rotate(157deg);
+  right: 130px;
+  top: 11px;
+  animation: fade linear 0.3s 0.6s forwards;
+}
+
+#orange {
+  background-image: $orange;
+  right: 41.6px;
+  top: 91px;
+  transform: rotate(-158deg);
+  animation: fade linear 0.3s 0.9s forwards;
+}
+
+#red {
+  background-image: $red;
+  bottom: 91px;
+  right: 41.6px;
+  transform: rotate(-112deg);
+  animation: fade linear 0.3s 1.2s forwards;
+}
+
+#purple {
+  background-image: $purple;
+  right: 130px;
+  bottom: 11px;
+  transform: rotate(-67deg);
+  animation: fade linear 0.3s 1.5s forwards;
+}
+
+#navy {
+  background-image: $navy;
+  left: 130px;
+  bottom: 11px;
+  transform: rotate(336deg);
+  animation: fade linear 0.3s 1.8s forwards;
+}
+
+#lightblue {
+  background-image: $lightblue;
+  left: 41.6px;
+  bottom: 91px;
+  transform: rotate(22deg);
+  animation: fade linear 0.3s 2.1s forwards;
+}
+
+#teal {
+  background-image: $teal;
+  left: 41.6px;
+  top: 91px;
+  transform: rotate(67deg);
+  animation: fade linear 0.3s 2.4s forwards;
+}
+
+#green {
+  background-image: $green;
+  transform: rotate(-248deg);
+  left: 130px;
+  top: 11px;
+  animation: fade linear 0.3s 2.7s forwards;
+}
+
+// enables hover animation only for this viewport
+@media (min-width: 769px) {
+  #grey:hover {
+    @include shift(right, top, 125px, -2px);
+  }
+  #orange:hover {
+    @include shift(right, top, 30px, 86px);
+  }
+  #red:hover {
+    @include shift(right, bottom, 30px, 86px);
+  }
+  #purple:hover {
+    @include shift(right, bottom, 125px, -2px);
+  }
+  #navy:hover {
+    @include shift(left, bottom, 125px, -2px);
+  }
+  #lightblue:hover {
+    @include shift(left, bottom, 30px, 86px);
+  }
+  #teal:hover {
+    @include shift(left, top, 30px, 86px);
+  }
+  #green:hover {
+    @include shift(left, top, 125px, -2px);
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    width: calc(#{$c_width} * 0.75);
+    height: calc(#{$c_height} * 0.75);
+  }
+  .tear {
+    height: calc(#{$tear_height} * 0.75);
+    width: calc(#{$tear_width} * 0.75);
+  }
+
+  // font sizing
+  p#greyLabel {
+    font-size: 0.75em;
+  }
+
+  p#orangeLabel {
+    font-size: 0.75em;
+  }
+
+  p#redLabel {
+    font-size: 0.75em;
+  }
+
+  p#purpleLabel {
+    font-size: 0.75em;
+  }
+
+  p#navyLabel {
+    font-size: 0.75em;
+  }
+
+  p#lightblueLabel {
+    font-size: 0.75em;
+  }
+
+  p#tealLabel {
+    font-size: 0.75em;
+  }
+
+  p#greenLabel {
+    font-size: 0.75em;
+  }
+
+  #grey {
+    right: calc(130px * 0.75);
+    top: calc(11px * 0.75);
+  }
+
+  #orange {
+    right: calc(41.6px * 0.75);
+    top: calc(91px * 0.75);
+  }
+
+  #red {
+    bottom: calc(91px * 0.75);
+    right: calc(41.6px * 0.75);
+  }
+
+  #purple {
+    right: calc(130px * 0.75);
+    bottom: calc(11px * 0.75);
+  }
+
+  #navy {
+    left: calc(130px * 0.75);
+    bottom: calc(11px * 0.75);
+  }
+
+  #lightblue {
+    left: calc(41.6px * 0.75);
+    bottom: calc(91px * 0.75);
+  }
+
+  #teal {
+    left: calc(41.6px * 0.75);
+    top: calc(91px * 0.75);
+  }
+
+  #green {
+    left: calc(130px * 0.75);
+    top: calc(11px * 0.75);
+  }
+
+  img#lightbulb {
+    width: auto;
+    height: calc(75px * 0.75);
+  }
+
+  img#research {
+    height: calc(70px * 0.75);
+    width: auto;
+  }
+
+  img#checklist {
+    width: auto;
+    height: calc(60px * 0.75);
+  }
+
+  img#circle {
+    width: calc(70px * 0.75);
+    height: auto;
+  }
+
+  img#money {
+    height: calc(70px * 0.75);
+    width: auto;
+  }
+
+  img#pencil {
+    width: auto;
+    height: calc(70px * 0.75);
+  }
+
+  img#head {
+    width: auto;
+    height: calc(70px * 0.75);
+  }
+
+  img#linechart {
+    width: calc(65px * 0.75);
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(#{$c_width} * 0.5);
+    height: calc(#{$c_height} * 0.5);
+  }
+  .tear {
+    height: calc(#{$tear_height} * 0.5);
+    width: calc(#{$tear_width} * 0.5);
+  }
+
+  // font sizing
+  p#greyLabel {
+    font-size: 0.5em;
+  }
+
+  p#orangeLabel {
+    font-size: 0.5em;
+  }
+
+  p#redLabel {
+    font-size: 0.5em;
+  }
+
+  p#purpleLabel {
+    font-size: 0.5em;
+  }
+
+  p#navyLabel {
+    font-size: 0.5em;
+  }
+
+  p#lightblueLabel {
+    font-size: 0.5em;
+  }
+
+  p#tealLabel {
+    font-size: 0.5em;
+  }
+
+  p#greenLabel {
+    font-size: 0.5em;
+  }
+
+  #grey {
+    right: calc(130px * 0.5);
+    top: calc(11px * 0.5);
+  }
+
+  #orange {
+    right: calc(41.6px * 0.5);
+    top: calc(91px * 0.5);
+  }
+
+  #red {
+    bottom: calc(91px * 0.5);
+    right: calc(41.6px * 0.5);
+  }
+
+  #purple {
+    right: calc(130px * 0.5);
+    bottom: calc(11px * 0.5);
+  }
+
+  #navy {
+    left: calc(130px * 0.5);
+    bottom: calc(11px * 0.5);
+  }
+
+  #lightblue {
+    left: calc(41.6px * 0.5);
+    bottom: calc(91px * 0.5);
+  }
+
+  #teal {
+    left: calc(41.6px * 0.5);
+    top: calc(91px * 0.5);
+  }
+
+  #green {
+    left: calc(130px * 0.5);
+    top: calc(11px * 0.5);
+  }
+
+  img#lightbulb {
+    width: auto;
+    height: calc(75px * 0.5);
+  }
+
+  img#research {
+    height: calc(70px * 0.5);
+    width: auto;
+  }
+
+  img#checklist {
+    width: auto;
+    height: calc(60px * 0.5);
+  }
+
+  img#circle {
+    width: calc(70px * 0.5);
+    height: auto;
+  }
+
+  img#money {
+    height: calc(70px * 0.5);
+    width: auto;
+  }
+
+  img#pencil {
+    width: auto;
+    height: calc(70px * 0.5);
+  }
+
+  img#head {
+    width: auto;
+    height: calc(70px * 0.5);
+  }
+
+  img#linechart {
+    width: calc(65px * 0.5);
+    height: auto;
+  }
+}
