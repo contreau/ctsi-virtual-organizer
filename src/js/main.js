@@ -3,7 +3,7 @@ let lightbulb = document.getElementById("lightbulb");
 let circle = document.getElementById("circle");
 let linechart = document.getElementById("linechart");
 let checklist = document.getElementById("checklist");
-let research = document.getElementById("research");
+let microscope = document.getElementById("microscope");
 let money = document.getElementById("money");
 let pencil = document.getElementById("pencil");
 let head = document.getElementById("head");
@@ -35,7 +35,7 @@ const restore = function (img, id) {
 
 // Event Listeners
 grey.addEventListener("mouseover", function () {
-  replace(lightbulb, "<b>01</b><br>Research<br>Question", "greyLabel");
+  replace(lightbulb, "Research<br>Question", "greyLabel");
 });
 
 grey.addEventListener("mouseout", function () {
@@ -43,23 +43,23 @@ grey.addEventListener("mouseout", function () {
 });
 
 orange.addEventListener("mouseover", function () {
-  replace(research, "<b>02</b><br>Research<br>Team", "orangeLabel");
+  replace(circle, "Research<br>Team", "orangeLabel");
 });
 
 orange.addEventListener("mouseout", function () {
-  restore(research, "orangeLabel");
+  restore(circle, "orangeLabel");
 });
 
 red.addEventListener("mouseover", function () {
-  replace(circle, "<b>03</b><br>Study<br>Design", "redLabel");
+  replace(microscope, "Study<br>Design", "redLabel");
 });
 
 red.addEventListener("mouseout", function () {
-  restore(circle, "redLabel");
+  restore(microscope, "redLabel");
 });
 
 purple.addEventListener("mouseover", function () {
-  replace(checklist, "<b>04</b><br>Protocols &<br>Compliance", "purpleLabel");
+  replace(checklist, "Protocols<br>&<br>Compliance", "purpleLabel");
 });
 
 purple.addEventListener("mouseout", function () {
@@ -67,7 +67,7 @@ purple.addEventListener("mouseout", function () {
 });
 
 navy.addEventListener("mouseover", function () {
-  replace(money, "<b>05</b><br>Funding", "navyLabel");
+  replace(money, "Funding", "navyLabel");
 });
 
 navy.addEventListener("mouseout", function () {
@@ -75,7 +75,7 @@ navy.addEventListener("mouseout", function () {
 });
 
 lightblue.addEventListener("mouseover", function () {
-  replace(pencil, "<b>06</b><br>Proposal<br>Development", "lightblueLabel");
+  replace(pencil, "Proposal<br>Development", "lightblueLabel");
 });
 
 lightblue.addEventListener("mouseout", function () {
@@ -83,7 +83,7 @@ lightblue.addEventListener("mouseout", function () {
 });
 
 teal.addEventListener("mouseover", function () {
-  replace(head, "<b>07</b><br>Conducting<br>the Study", "tealLabel");
+  replace(head, "Conducting<br>the Study", "tealLabel");
 });
 
 teal.addEventListener("mouseout", function () {
@@ -91,7 +91,7 @@ teal.addEventListener("mouseout", function () {
 });
 
 green.addEventListener("mouseover", function () {
-  replace(linechart, "<b>08</b><br>Reporting<br>Results", "greenLabel");
+  replace(linechart, "Reporting<br>Results", "greenLabel");
 });
 
 green.addEventListener("mouseout", function () {
