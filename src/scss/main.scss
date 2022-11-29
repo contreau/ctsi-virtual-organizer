@@ -41,7 +41,8 @@ $tear_height: 140px;
 p.tear-label {
   text-align: center;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p#greyLabel {
@@ -58,7 +59,7 @@ p#redLabel {
 
 p#purpleLabel {
   transform: rotate(67deg);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 p#navyLabel {
@@ -67,7 +68,7 @@ p#navyLabel {
 
 p#lightblueLabel {
   transform: rotate(-22deg);
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 p#tealLabel {
@@ -141,16 +142,28 @@ img#linechart {
   width: $tear_width;
   border-radius: 100% 0% 80% 20% / 80% 0% 100% 20%;
   transition-duration: 0.4s;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 3px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 6px 0px;
   display: grid;
   place-items: center;
 }
 
 .tear:hover {
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  //   rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -15px;
   transition-duration: 0.4s;
 }
+
+/*
+$teal: #338275;
+$green: #58813c;
+$grey: #736157;
+$orange: #cd4c21;
+$lightblue: #007db1;
+$navy: #243c54;
+$purple: #683872;
+$red: #dc192a;
+*/
 
 #grey {
   background-color: $grey;
@@ -158,6 +171,9 @@ img#linechart {
   right: 130px;
   top: 11px;
   animation: fade linear 0.3s 0.6s forwards;
+  &:hover {
+    background-color: #736157ee;
+  }
 }
 
 #orange {
@@ -166,6 +182,9 @@ img#linechart {
   top: 91px;
   transform: rotate(-158deg);
   animation: fade linear 0.3s 0.9s forwards;
+  &:hover {
+    background-color: #cd4c21ee;
+  }
 }
 
 #red {
@@ -174,6 +193,9 @@ img#linechart {
   right: 41.6px;
   transform: rotate(-112deg);
   animation: fade linear 0.3s 1.2s forwards;
+  &:hover {
+    background-color: #dc192aee;
+  }
 }
 
 #purple {
@@ -182,6 +204,9 @@ img#linechart {
   bottom: 11px;
   transform: rotate(-67deg);
   animation: fade linear 0.3s 1.5s forwards;
+  &:hover {
+    background-color: #683872ee;
+  }
 }
 
 #navy {
@@ -190,6 +215,9 @@ img#linechart {
   bottom: 11px;
   transform: rotate(336deg);
   animation: fade linear 0.3s 1.8s forwards;
+  &:hover {
+    background-color: #243c54ee;
+  }
 }
 
 #lightblue {
@@ -198,6 +226,9 @@ img#linechart {
   bottom: 91px;
   transform: rotate(22deg);
   animation: fade linear 0.3s 2.1s forwards;
+  &:hover {
+    background-color: #007db1ee;
+  }
 }
 
 #teal {
@@ -206,6 +237,9 @@ img#linechart {
   top: 91px;
   transform: rotate(67deg);
   animation: fade linear 0.3s 2.4s forwards;
+  &:hover {
+    background-color: #338275ee;
+  }
 }
 
 #green {
@@ -214,6 +248,9 @@ img#linechart {
   left: 130px;
   top: 11px;
   animation: fade linear 0.3s 2.7s forwards;
+  &:hover {
+    background-color: #58813cee;
+  }
 }
 
 // enables hover animation only for this viewport
@@ -261,7 +298,7 @@ img#linechart {
   }
 
   p#purpleLabel {
-    font-size: 1.14rem;
+    font-size: 1rem;
   }
 
   // tear absolute positioning
@@ -359,15 +396,15 @@ img#linechart {
 
   // font sizing
   p.tear-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   p#purpleLabel {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   p#lightblueLabel {
-    font-size: 0.75rem;
+    font-size: 0.66rem;
   }
 
   // tear absolute positioning
