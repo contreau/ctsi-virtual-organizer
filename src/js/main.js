@@ -34,66 +34,66 @@ const restore = function (img, id) {
 };
 
 // Event Listeners
-grey.addEventListener("mouseover", function () {
+grey.addEventListener("mouseover", () => {
   replace(lightbulb, "Research<br>Question", "greyLabel");
 });
 
-grey.addEventListener("mouseout", function () {
+grey.addEventListener("mouseout", () => {
   restore(lightbulb, "greyLabel");
 });
 
-orange.addEventListener("mouseover", function () {
+orange.addEventListener("mouseover", () => {
   replace(circle, "Research<br>Team", "orangeLabel");
 });
 
-orange.addEventListener("mouseout", function () {
+orange.addEventListener("mouseout", () => {
   restore(circle, "orangeLabel");
 });
 
-red.addEventListener("mouseover", function () {
+red.addEventListener("mouseover", () => {
   replace(microscope, "Study<br>Design", "redLabel");
 });
 
-red.addEventListener("mouseout", function () {
+red.addEventListener("mouseout", () => {
   restore(microscope, "redLabel");
 });
 
-purple.addEventListener("mouseover", function () {
+purple.addEventListener("mouseover", () => {
   replace(checklist, "Protocols<br>&<br>Compliance", "purpleLabel");
 });
 
-purple.addEventListener("mouseout", function () {
+purple.addEventListener("mouseout", () => {
   restore(checklist, "purpleLabel");
 });
 
-navy.addEventListener("mouseover", function () {
+navy.addEventListener("mouseover", () => {
   replace(money, "Funding", "navyLabel");
 });
 
-navy.addEventListener("mouseout", function () {
+navy.addEventListener("mouseout", () => {
   restore(money, "navyLabel");
 });
 
-lightblue.addEventListener("mouseover", function () {
+lightblue.addEventListener("mouseover", () => {
   replace(pencil, "Proposal<br>Development", "lightblueLabel");
 });
 
-lightblue.addEventListener("mouseout", function () {
+lightblue.addEventListener("mouseout", () => {
   restore(pencil, "lightblueLabel");
 });
 
-teal.addEventListener("mouseover", function () {
+teal.addEventListener("mouseover", () => {
   replace(head, "Conducting<br>the Study", "tealLabel");
 });
 
-teal.addEventListener("mouseout", function () {
+teal.addEventListener("mouseout", () => {
   restore(head, "tealLabel");
 });
 
-green.addEventListener("mouseover", function () {
+green.addEventListener("mouseover", () => {
   replace(linechart, "Reporting<br>Results", "greenLabel");
 });
 
-green.addEventListener("mouseout", function () {
+green.addEventListener("mouseout", () => {
   restore(linechart, "greenLabel");
 });
