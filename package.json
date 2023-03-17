@@ -1,7 +1,6 @@
 {
   "name": "ctsi-vo_v2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
@@ -16,5 +15,14 @@
   },
   "dependencies": {
     "parcel": "^2.8.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenDev-2/ctsi-virtual-organizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zenDev-2/ctsi-virtual-organizer/issues"
+  },
+  "homepage": "https://github.com/zenDev-2/ctsi-virtual-organizer#readme",
+  "description": ""
 }
