@@ -1,22 +1,24 @@
 // Variables for images
-let lightbulb = document.getElementById("lightbulb");
-let circle = document.getElementById("circle");
-let linechart = document.getElementById("linechart");
-let checklist = document.getElementById("checklist");
-let microscope = document.getElementById("microscope");
-let money = document.getElementById("money");
-let pencil = document.getElementById("pencil");
-let head = document.getElementById("head");
+const lightbulb = document.getElementById("lightbulb");
+const circle = document.getElementById("circle");
+const linechart = document.getElementById("linechart");
+const checklist = document.getElementById("checklist");
+const microscope = document.getElementById("microscope");
+const money = document.getElementById("money");
+const pencil = document.getElementById("pencil");
+const head = document.getElementById("head");
+const calendar = document.getElementById("calendar");
 
 // Variables for tear containers
-let grey = document.getElementById("grey");
-let orange = document.getElementById("orange");
-let red = document.getElementById("red");
-let purple = document.getElementById("purple");
-let navy = document.getElementById("navy");
-let lightblue = document.getElementById("lightblue");
-let teal = document.getElementById("teal");
-let green = document.getElementById("green");
+const grey = document.getElementById("grey");
+const orange = document.getElementById("orange");
+const red = document.getElementById("red");
+const purple = document.getElementById("purple");
+const navy = document.getElementById("navy");
+const lightblue = document.getElementById("lightblue");
+const teal = document.getElementById("teal");
+const green = document.getElementById("green");
+const centerpiece = document.querySelector(".centerpiece");
 
 // Event functions
 const replace = function (img, inner_HTML, id) {
@@ -96,4 +98,12 @@ green.addEventListener("mouseover", () => {
 
 green.addEventListener("mouseout", () => {
   restore(linechart, "greenLabel");
+});
+
+centerpiece.addEventListener("mouseover", () => {
+  replace(calendar, "Events", "calendarLabel");
+});
+
+centerpiece.addEventListener("mouseout", () => {
+  restore(calendar, "calendarLabel");
 });
